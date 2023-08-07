@@ -4,6 +4,6 @@ const router = express.Router();
 const homeController = require('../controllers/home_controller');
 
 router.get('/', homeController.home);
-router.use('/add' , require('./add_user'));
+router.use('/add' , require('./add_task'));
 
 module.exports = router;
