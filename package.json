@@ -1,0 +1,16 @@
+{
+  "name": "todoapp",
+  "version": "1.0.0",
+  "description": "A ToDoList web app ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Murugavel V",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}
