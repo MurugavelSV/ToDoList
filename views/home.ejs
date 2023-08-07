@@ -9,7 +9,7 @@
             
             <div id="container">
                 <p id="app-title" class="pt-2">TODO App</p>
-                <form action="/" method="post">
+                <form action="/add/task" method="post">
                     <div id="tasks-input-container">
 
                         <div class="span2 bt">
@@ -31,7 +31,7 @@
     
                         <div class="bl by">
                             <p class="field-description">Due Date</p>
-                            <input type="date" name="due-date" id="due-date">
+                            <input type="date" name="dueDate" id="due-date">
                         </div>
     
                         <div class="span2">
@@ -39,7 +39,7 @@
                                 <p><i class="fa-solid fa-plus"></i>ADD TASK</p>
                             </button>
                             <button type="button" id="task-add-button">
-                                <p><a href=""><i class="fa-solid fa-trash-can"></i>DELETE TASKS</a></p>
+                                <p><a href="/delete/task"><i class="fa-solid fa-trash-can"></i>DELETE TASKS</a></p>
                             </button>
                         </div>
     
