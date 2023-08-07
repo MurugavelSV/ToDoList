@@ -1,13 +1,53 @@
 <html>
     <head>
         <title>ToDoList App</title>
+        <script src="https://kit.fontawesome.com/1d71c5906f.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/home.css">
     </head>
     <body>
         <div id="app">
+            
             <div id="container">
-                <p id="app-title">TODO App</p>
-            </div>    
+                <p id="app-title" class="pt-2">TODO App</p>
+                <form action="/" method="post">
+                    <div id="tasks-input-container">
+
+                        <div class="span2 bt">
+                            <p class="field-description">Description</p>
+                            <input type="text" name="task" placeholder="What do you need to do?" id="task-text">
+                        </div>
+    
+                        <div class="by">
+                            <p class="field-description">Category</p>
+                            <select name="category" id="category">
+                                <option value="">Choose a category</option>
+                                <option value="personal">Personal</option>
+                                <option value="work">Work</option>
+                                <option value="school">School</option>
+                                <option value="cleaning">Cleaning</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+    
+                        <div class="bl by">
+                            <p class="field-description">Due Date</p>
+                            <input type="date" name="due-date" id="due-date">
+                        </div>
+    
+                        <div class="span2">
+                            <button type="submit" id="submit-button">
+                                <p><i class="fa-solid fa-plus"></i>ADD TASK</p>
+                            </button>
+                            <button id="task-add-button">
+                                <p><i class="fa-solid fa-trash-can"></i>DELETE TASKS</p>
+                            </button>
+                        </div>
+    
+                    </div>
+                </form>
+                
+            </div>
+
         </div>
     </body>
 </html>
