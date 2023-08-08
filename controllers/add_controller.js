@@ -5,7 +5,7 @@ module.exports.addTasks = (req, res) => {
         await Tasks.create({
             task: req.body.task,
             category: req.body.category,
-            dueDate: req.body.dueDate,
+            dueDate: req.body.dueDate
         }).then((data) => {
             console.log(data);
             return res.redirect('/');

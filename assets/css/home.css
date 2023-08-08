@@ -45,6 +45,10 @@ body{
     display: inline-block;
 }
 
+.fw-b{
+    font-weight: bold;
+}
+
 /* Styles for the whole container of the app */
 
 #app{
@@ -96,7 +100,6 @@ body{
 
 .field-description{
     text-transform: uppercase;
-    font-weight: bold;
     margin-bottom: 0.4rem;
     color: rgba(128, 128, 128, 0.8);;
 }
@@ -110,7 +113,6 @@ body{
     border: none;
     color: rgba(128, 128, 128, 0.8);
     font-size: 1rem;
-    font-weight: bold;
 }
 
 #task-text::placeholder{
@@ -122,7 +124,6 @@ button > p,button > p > a{
     color: white;
     font-size: 1.3rem;
     text-decoration: none;
-    cursor: default;
     margin: 0;
     height: 90%;
 }
@@ -172,8 +173,11 @@ i{
     vertical-align: top;
 }
 
+.task-checker > a,.task-checker > a > div{
+    height: 100%;
+}
+
 .task-name{
-    font-weight: bold;
     font-size: 1.3rem;
     margin-top: 1.5rem;
 }
@@ -197,4 +201,15 @@ i{
     border: 1px solid black;
     border-radius: 4px;
     text-align: center;
+}
+
+.date-text{
+    color: rgba(128, 128, 128, 0.7);
+    letter-spacing: 2px;
+}
+
+/* Cursor property for anchor tags */
+
+a{
+    cursor: default;
 }

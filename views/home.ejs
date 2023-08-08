@@ -13,13 +13,13 @@
                     <div id="tasks-input-container">
 
                         <div class="span2 bt">
-                            <p class="field-description">Description</p>
-                            <input type="text" name="task" placeholder="What do you need to do?" id="task-text">
+                            <p class="field-description fw-b">Description</p>
+                            <input type="text" name="task" placeholder="What do you need to do?" id="task-text" class="fw-b">
                         </div>
     
                         <div class="by">
                             <p class="field-description">Category</p>
-                            <select name="category" id="category">
+                            <select name="category" id="category" class="fw-b">
                                 <option value="">Choose a category</option>
                                 <option value="personal">Personal</option>
                                 <option value="work">Work</option>
@@ -31,7 +31,7 @@
     
                         <div class="bl by">
                             <p class="field-description">Due Date</p>
-                            <input type="date" name="dueDate" id="due-date">
+                            <input type="date" name="dueDate" id="due-date" class="fw-b">
                         </div>
     
                         <div class="span2">
@@ -53,10 +53,10 @@
     
                             <li class="bt tasks pt-0-5">
                                 <div class="task-checker ib">
-                                    <a href=""><div></div></a>
+                                    <a href="/toggle/task/?id=<%= i._id %>&status=<%= i.completed %>"><div></div></a>
                                 </div>
                                 <div class="task-description ib pb-1-5">
-                                    <p class="task-name">
+                                    <p class="task-name fw-b">
                                         <%= i.task %>
                                     </p>
 
@@ -66,8 +66,8 @@
                                         </p>
                                     </div>
             
-                                    <p>
-                                        <%= i.dueDate %>
+                                    <p class="date-text fw-b">
+                                        <%= i.dueDate.toString().slice(4,10) + ", " + i.dueDate.toString().slice(11,15) %>
                                     </p>
                                 </div>
                             </li>
