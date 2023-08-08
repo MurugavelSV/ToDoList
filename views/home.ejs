@@ -39,7 +39,7 @@
                                 <p><i class="fa-solid fa-plus"></i>ADD TASK</p>
                             </button>
                             <button type="button" id="task-add-button">
-                                <p><a href="/delete/task"><i class="fa-solid fa-trash-can"></i>DELETE TASKS</a></p>
+                                <p><a href="/delete/task" class="ib"><i class="fa-solid fa-trash-can"></i>DELETE TASKS</a></p>
                             </button>
                         </div>
     
@@ -53,15 +53,19 @@
     
                             <li class="bt tasks pt-0-5">
                                 <div class="task-checker ib">
-                                    <a href=""></a>
+                                    <a href=""><div></div></a>
                                 </div>
-                                <div class="task-description ib">
+                                <div class="task-description ib pb-1-5">
                                     <p class="task-name">
                                         <%= i.task %>
                                     </p>
-                                    <p>
-                                        <%= i.category %>
-                                    </p>
+
+                                    <div class="category">
+                                        <p class="m-0">
+                                            <%= i.category.toUpperCase() %>
+                                        </p>
+                                    </div>
+            
                                     <p>
                                         <%= i.dueDate %>
                                     </p>
@@ -76,5 +80,8 @@
             </div>
 
         </div>
+
+        <script src="./js/home.js"></script>
+
     </body>
 </html>
