@@ -1,4 +1,3 @@
-const db = require('../config/mongoose');
 const Tasks = require('../models/toDoTasks');
 
 module.exports.addTasks = (req, res) => {

@@ -46,6 +46,33 @@
                     </div>
                 </form>
                 
+                <div id="task-container">
+
+                    <ul id="task-list">
+                        <% for(let i of taskList){ %>
+    
+                            <li class="bt tasks pt-0-5">
+                                <div class="task-checker ib">
+                                    <a href=""></a>
+                                </div>
+                                <div class="task-description ib">
+                                    <p class="task-name">
+                                        <%= i.task %>
+                                    </p>
+                                    <p>
+                                        <%= i.category %>
+                                    </p>
+                                    <p>
+                                        <%= i.dueDate %>
+                                    </p>
+                                </div>
+                            </li>
+    
+                        <% } %>
+                    </ul>
+    
+                </div>
+
             </div>
 
         </div>

@@ -1,3 +1,13 @@
+const Tasks = require('../models/toDoTasks');
+
 module.exports.home = (req, res) => {
-    return res.render('home');
+    (async () => {
+        await Tasks.find({}).then((data) => {
+            return res.render('home', {
+                taskList: data
+            });
+        }).catch((err) => {
+            console.log(err.message);
+        });
+    })();
 }
