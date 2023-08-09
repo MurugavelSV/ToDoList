@@ -1,5 +1,6 @@
 const Tasks = require('../models/toDoTasks');
 
+// module for rendering tasks
 module.exports.home = (req, res) => {
     (async () => {
         await Tasks.find({}).then((data) => {

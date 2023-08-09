@@ -1,5 +1,7 @@
+// Importing the model
 const Tasks = require('../models/toDoTasks');
 
+// module for creating task
 module.exports.addTasks = (req, res) => {
     (async () => {
         await Tasks.create({

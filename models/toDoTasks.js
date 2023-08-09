@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// defining the schema to be used
 const tasksSchema = new mongoose.Schema({
     task: {
         type: String,
@@ -19,6 +20,7 @@ const tasksSchema = new mongoose.Schema({
     }
 });
 
+// loading schema in the model
 const Tasks = mongoose.model('Tasks', tasksSchema);
 
 module.exports = Tasks;

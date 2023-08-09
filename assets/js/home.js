@@ -1,6 +1,8 @@
 let categoryContainer = document.getElementsByClassName('category');
 let paraText = document.querySelectorAll('.category > p');
 
+// Setting background color for each card based on category
+
 for(let i = 0;i < paraText.length;i++){
     let bgColor = "";
 
