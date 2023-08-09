@@ -123,7 +123,6 @@ body{
 button > p,button > p > a{
     color: white;
     font-size: 1.3rem;
-    text-decoration: none;
     margin: 0;
     height: 90%;
 }
@@ -175,6 +174,7 @@ i{
 
 .task-checker > a,.task-checker > a > div{
     height: 100%;
+    position: relative;
 }
 
 .task-name{
@@ -208,8 +208,29 @@ i{
     letter-spacing: 2px;
 }
 
+/* Styles when a task is completed */
+
+.task-complete{
+    background-color: lightgreen;
+}
+
+.task-complete > a > div > div{
+    position: absolute;
+    height: 15px;
+    width: 7px;
+    left: 6px;
+    transform: rotate(40deg);
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.strike-out{
+    text-decoration: line-through;
+}
+
 /* Cursor property for anchor tags */
 
 a{
     cursor: default;
+    text-decoration: none;
 }
