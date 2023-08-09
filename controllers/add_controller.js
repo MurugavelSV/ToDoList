@@ -6,11 +6,10 @@ module.exports.addTasks = (req, res) => {
             task: req.body.task,
             category: req.body.category,
             dueDate: req.body.dueDate
-        }).then((data) => {
-            console.log(data);
+        }).then(() => {
             return res.redirect('/');
         }).catch((err) => {
-            console.log(err.message);
+            console.log(`Error: ${err.message}`);
         });
     })();
 }

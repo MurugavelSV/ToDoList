@@ -1,8 +1,19 @@
+/* Common variables for color */
+
+:root{
+    --light_grey: rgba(128, 128, 128, 0.7);
+    --mild_grey: rgba(128, 128, 128, 0.8);
+    --gray: gray;
+    --white: white;
+    --lightgreen: lightgreen;
+    --ivory: rgba(128, 128, 128, 0.2);
+}
+
 /* Styles for body */
 body{
     font-family: sans-serif;
-    background-color: rgba(128, 128, 128, 0.8);
-    color: grey;
+    background-color: var(--mild_grey);
+    color: var(--gray);
     margin: 0;
 }
 
@@ -29,16 +40,16 @@ body{
 }
 
 .bt{
-    border-top: 2.3px solid rgba(128, 128, 128, 0.2);
+    border-top: 2.3px solid var(--ivory);
 }
 
 .bl{
-    border-left: 2.3px solid rgba(128, 128, 128, 0.2);
+    border-left: 2.3px solid var(--ivory);
 }
 
 .by{
-    border-top: 2.3px solid rgba(128, 128, 128, 0.2);
-    border-bottom: 2.3px solid rgba(128, 128, 128, 0.2);
+    border-top: 2.3px solid var(--ivory);
+    border-bottom: 2.3px solid var(--ivory);
 }
 
 .ib{
@@ -58,7 +69,7 @@ body{
 
 #container{
     margin: auto;
-    background-color: white;
+    background-color: var(--white);
     width: 55%;
 }
 
@@ -101,7 +112,7 @@ body{
 .field-description{
     text-transform: uppercase;
     margin-bottom: 0.4rem;
-    color: rgba(128, 128, 128, 0.8);;
+    color: var(--mild_grey);;
 }
 
 #tasks-input-container > div > input,#category{
@@ -111,17 +122,17 @@ body{
 #task-text,#due-date,#category{
     outline: none;
     border: none;
-    color: rgba(128, 128, 128, 0.8);
+    color: var(--mild_grey);
     font-size: 1rem;
 }
 
 #task-text::placeholder{
-    color: rgba(128, 128, 128, 0.7);
+    color: var(--light_grey);
     letter-spacing: 2px;
 }
 
 button > p,button > p > a{
-    color: white;
+    color: var(--white);
     font-size: 1.3rem;
     margin: 0;
     height: 90%;
@@ -188,6 +199,7 @@ i{
 
 .task-description{
     position: relative;
+    margin-top: 0.3rem;
     width: 90%;
 }
 
@@ -197,21 +209,28 @@ i{
     top: 1.2rem;
     width: 6rem;
     padding: 0.8rem 0.6rem;
-    color: white;
+    color: var(--white);
     border: 1px solid black;
     border-radius: 4px;
     text-align: center;
 }
 
 .date-text{
-    color: rgba(128, 128, 128, 0.7);
+    color: var(--light_grey);
     letter-spacing: 2px;
+}
+
+#calendar-icon{
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+    margin-left: 0rem;
+    color: var(--light_grey);
 }
 
 /* Styles when a task is completed */
 
 .task-complete{
-    background-color: lightgreen;
+    background-color: var(--lightgreen);
 }
 
 .task-complete > a > div > div{
@@ -220,8 +239,8 @@ i{
     width: 7px;
     left: 6px;
     transform: rotate(40deg);
-    border-right: 2px solid white;
-    border-bottom: 2px solid white;
+    border-right: 2px solid var(--white);
+    border-bottom: 2px solid var(--white);
 }
 
 .strike-out{

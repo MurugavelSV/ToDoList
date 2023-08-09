@@ -7,7 +7,7 @@ module.exports.home = (req, res) => {
                 taskList: data
             });
         }).catch((err) => {
-            console.log(err.message);
+            console.log(`Error: ${err.message}`);
         });
     })();
 }

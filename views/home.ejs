@@ -52,13 +52,7 @@
                         <% for(let i of taskList){ %>
     
                             <li class="bt tasks pt-0-5">
-
-                                <% if(i.completed){ %>
-                                    <div class="task-checker ib task-complete">
-                                <% }else{ %>
-                                    <div class="task-checker ib">
-                                <% } %>
-
+                                <div class="task-checker ib <%= i.completed ? 'task-complete' : '' %>">
                                 <a href="/toggle/task/?id=<%= i._id %>&status=<%= i.completed %>">
                                     <div>
                                         <div></div>
@@ -68,11 +62,7 @@
                                 
                                 <div class="task-description ib pb-1-5">
                                     
-                                    <% if(i.completed){ %>
-                                        <p class="task-name fw-b strike-out">
-                                    <% }else{ %>
-                                        <p class="task-name fw-b">
-                                    <% } %>
+                                    <p class="task-name fw-b <%= i.completed ? 'strike-out' : '' %>">
                                         <%= i.task %>
                                     </p>
 
@@ -82,12 +72,9 @@
                                         </p>
                                     </div>
      
-                                    <% if(i.completed){ %>
-                                        <p class="date-text fw-b strike-out">
-                                    <% }else{ %>
-                                        <p class="date-text fw-b">
-                                    <% } %>
-                                        <%= i.dueDate.toString().slice(4,10) + ", " + i.dueDate.toString().slice(11,15) %>
+                                    <i id="calendar-icon" class="fa-regular fa-calendar-days ib" ></i>
+                                    <p class="date-text fw-b <%= i.completed ? 'strike-out' : '' %> ib">
+                                        <%= i.dueDate ? `${i.dueDate.toString().slice(4, 10)}, ${i.dueDate.toString().slice(11, 15)}` : "NO DEADLINE" %>
                                     </p>
                                 </div>
                             </li>
